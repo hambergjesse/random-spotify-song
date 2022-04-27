@@ -78,6 +78,10 @@ a {
   gap: 25px;
 }
 
+.generate-song iframe {
+  box-shadow: 0px 0px 10px var(--spotgrey);
+}
+
 .main-button {
   cursor: pointer;
   width: 110px;
@@ -86,5 +90,6 @@ a {
   font-weight: 600;
   color: var(--spotblack);
   background: var(--spotgreen);
-  border-radius: 15px;
+  box-shadow: 0px 0px 15px var(--spotgrey);
+  border-radius: 10px;
 }
