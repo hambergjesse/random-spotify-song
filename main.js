@@ -1,4 +1,4 @@
-function generateSong() {
+function fetchSong() {
   /*let random_seed = makeid(2);
   let random_offset = Math.floor(Math.random() * 2000); // returns a random integer from 0 to 9
   ({

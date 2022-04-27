@@ -37,10 +37,16 @@ body {
   align-items: center;
   width: 100vw;
   height: 100vh;
+  background: var(--spotgrey);
 }
 
 img {
   max-width: 100%;
+}
+
+a {
+  color: var(--spotblack);
+  text-decoration: none;
 }
 
 /* the good shit */
@@ -50,26 +56,35 @@ img {
   justify-content: center;
   align-items: center;
   text-align: center;
-  border: 1px solid red;
-  width: 500px;
-  height: 600px;
-  gap: 10px;
+  background: var(--spotwhite);
+  border-radius: 50px;
+  width: 400px;
+  height: 240px;
+  gap: 25px;
 }
 
 .top-bar ul {
   display: flex;
   flex-direction: row;
+  font-weight: 600;
   gap: 25px;
 }
 
+/* song parent */
 .generate-song {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  align-items: center;
+  gap: 25px;
 }
 
-.spotify-song {
-  width: 200px;
-  height: 200px;
-  border: 1px solid red;
+.main-button {
+  cursor: pointer;
+  width: 110px;
+  height: 35px;
+  border: none;
+  font-weight: 600;
+  color: var(--spotblack);
+  background: var(--spotgreen);
+  border-radius: 15px;
 }

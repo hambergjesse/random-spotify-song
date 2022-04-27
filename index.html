@@ -27,8 +27,18 @@
         </nav>
       </section>
       <section class="generate-song">
-        <div class="spotify-song"></div>
-        <button class="main-button" onclick="generateSong()">Generate</button>
+        <!-- placement holder song -->
+        <iframe
+          class="spotify-song"
+          style="border-radius: 10px"
+          src="https://open.spotify.com/embed/track/2KvHC9z14GSl4YpkNMX384?utm_source=generator&theme=0"
+          width="100%"
+          height="80"
+          frameborder="0"
+          allowfullscreen=""
+          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+        ></iframe>
+        <button class="main-button" onclick="fetchSong()">Generate</button>
       </section>
     </div>
   </body>
