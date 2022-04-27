@@ -1,19 +1,3 @@
-let Spotify = require("spotify-web-api-js");
-let s = new Spotify();
-//s.searchTracks()...
-
-let spotifyApi = new SpotifyWebApi();
-spotifyApi.setAccessToken("");
-
-// Set all credentials at the same time
-spotifyApi.setCredentials({
-  accessToken: "myAccessToken",
-  refreshToken: "myRefreshToken",
-  redirectUri: "http://127.0.0.1:5500/index.html",
-  "clientId ": "dabf5dfc80a74041a03084632fecfaeb",
-  clientSecret: "f58350e65a8742c2b3ab705d3d106a7c",
-});
-
 function makeid(length) {
   let result = "";
   let characters =
@@ -25,7 +9,7 @@ function makeid(length) {
   return result;
 }
 
-// fetch random song
+// fetch random song & replace ID in source URL
 function getASong() {
   let random_seed = makeid(2);
   let random_offset = Math.floor(Math.random() * 2000); // returns a random integer from 0 to 9
@@ -51,17 +35,3 @@ function getASong() {
     },
   });
 }
-
-// idk tries to replace song ID with new song ID
-/*function getSong(songs) {
-  let sourceLink = `<iframe src="https://open.spotify.com/embed/track/2KvHC9z14GSl4YpkNMX384?utm_source=generator&theme=0"></iframe>`;
-  songs.forEach(function (song) {
-    sourceLink += `<iframe src="https://open.spotify.com/embed/track/${song}?utm_source=generator&theme=0"></iframe>`;
-  });
-  // replaces song source link
-  function replaceURL(song) {
-    document.getElementsByClassName("spotify-song").src = song;
-  }
-}
-
-("https://open.spotify.com/embed/track/ + ${song} + ?utm_source=generator&theme=0");*/
