@@ -1,4 +1,4 @@
-function makeid(length) {
+function makeId(length) {
   let result = "";
   let characters =
     "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
@@ -11,7 +11,7 @@ function makeid(length) {
 
 // fetch random song & replace ID in source URL
 function getASong() {
-  let random_seed = makeid(2);
+  let random_seed = makeId(2);
   let random_offset = Math.floor(Math.random() * 2000); // returns a random integer from 0 to 9
   let options = {
     url:
