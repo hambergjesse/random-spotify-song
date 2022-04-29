@@ -13,7 +13,7 @@ function makeid(length) {
 function getASong() {
   let random_seed = makeid(2);
   let random_offset = Math.floor(Math.random() * 2000); // returns a random integer from 0 to 9
-  $.ajax({
+  let options = {
     url:
       "https://api.spotify.com/v1/search?type=track&offset=" +
       random_offset +
@@ -23,7 +23,6 @@ function getASong() {
     success: function (data) {
       console.log(data);
 
-      play(trackUri);
       document
         .querySelector(".spotify-song")
         .attr(
@@ -33,5 +32,6 @@ function getASong() {
             "?utm_source=generator&theme=0"
         );
     },
-  });
+  };
+  console.log(options);
 }
