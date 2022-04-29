@@ -18,7 +18,9 @@ function getASong() {
     random_offset +
     "&limit=1&q=" +
     random_seed;
+
   console.log(songURL);
+
   function replaceID(songURL) {
     document
       .querySelector(".spotify-song")
