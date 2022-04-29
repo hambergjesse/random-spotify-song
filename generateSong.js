@@ -23,14 +23,12 @@ function getASong() {
     success: function (data) {
       console.log(data);
 
-      document
-        .querySelector(".spotify-song")
-        .attr(
-          "src",
-          "https://open.spotify.com/embed/track/" +
+      document.querySelector(".spotify-song").attr(
+        "src"
+        /*"https://open.spotify.com/embed/track/" +
             data.tracks.items[0].id +
-            "?utm_source=generator&theme=0"
-        );
+            "?utm_source=generator&theme=0"*/
+      );
     },
   };
   console.log(options);
