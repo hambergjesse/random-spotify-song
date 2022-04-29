@@ -1,12 +1,12 @@
 function makeId(length) {
-  let result = "";
+  let songID = "";
   let characters =
     "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
   let charactersLength = characters.length;
   for (let i = 0; i < length; i++) {
     result += characters.charAt(Math.floor(Math.random() * charactersLength));
   }
-  return result;
+  return songID;
 }
 
 // fetch random song & replace ID in source URL
@@ -23,12 +23,14 @@ function getASong() {
     success: function (data) {
       console.log(data);
 
-      document.querySelector(".spotify-song").attr(
-        "src"
-        /*"https://open.spotify.com/embed/track/" +
-            data.tracks.items[0].id +
-            "?utm_source=generator&theme=0"*/
-      );
+      document
+        .querySelector(".spotify-song")
+        .attr(
+          "src",
+          "https://open.spotify.com/embed/track/" +
+            songID +
+            "?utm_source=generator&theme=0"
+        );
     },
   };
   console.log(options);
