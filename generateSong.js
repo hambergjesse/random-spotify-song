@@ -18,7 +18,8 @@ function getASong() {
     random_offset +
     "&limit=1&q=" +
     random_seed;
-  function replaceID() {
+  console.log(songURL);
+  function replaceID(songURL) {
     document
       .querySelector(".spotify-song")
       .attr(
@@ -27,8 +28,6 @@ function getASong() {
           songURL +
           "?utm_source=generator&theme=0"
       );
-    console.log(replaceID);
-    document.querySelector(".spotify-song").attr("src", replaceID);
   }
   console.log(replaceID);
 }
