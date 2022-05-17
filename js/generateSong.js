@@ -1,8 +1,3 @@
-// Error handling
-player.on("initialization_error", (e) => console.error(e));
-player.on("authentication_error", (e) => console.error(e));
-player.on("account_error", (e) => console.error(e));
-
 function makeId(length) {
   let result = "";
   let characters =
